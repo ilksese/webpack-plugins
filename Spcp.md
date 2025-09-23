@@ -53,6 +53,13 @@ class Spcp {
     this.isClosing = false;
     this.watcher = null;
     this.prettierConfig = null;
+    this.split = this.split.bind(this);
+    this.getPages = this.getPages.bind(this);
+    this.emitFile = this.emitFile.bind(this);
+    this.build = this.build.bind(this);
+    this.setupWatcher = this.setupWatcher.bind(this);
+    this.setupSignalHandlers = this.setupSignalHandlers.bind(this);
+    this.apply = this.apply.bind(this);
   }
 
   split(page) {
